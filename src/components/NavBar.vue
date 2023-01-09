@@ -3,11 +3,11 @@ import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuIt
 import { Bars3Icon, BellIcon, XMarkIcon, HomeIcon } from '@heroicons/vue/24/outline'
 
 const navigation = [
-  { name: 'Inicio', href: '#', current: true, icon:'<HomeIcon/>' },
-  { name: 'Descubrir', href: '#', current: false, icon:'' },
-  { name: 'Favoritos', href: '#', current: false, icon:'' },
-  { name: 'Descargado', href: '#', current: false, icon:'' },
-  { name: 'Configuración', href: '#', current: false, icon:'' },
+  { name: 'Inicio', href: '#', current: true},
+  { name: 'Descubrir', href: '#', current: false},
+  { name: 'Favoritos', href: '#', current: false},
+  { name: 'Descargado', href: '#', current: false},
+  { name: 'Configuración', href: '#', current: false},
 ]
 </script>
 
@@ -83,18 +83,14 @@ const navigation = [
           :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'block px-3 py-2 rounded-md text-base font-medium']"
           :aria-current="item.current ? 'page' : undefined"> <span v-html="item.icon"></span> {{ item.name }}
         </DisclosureButton>
-        <DisclosureButton :class="[active ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'block px-3 py-2 rounded-md text-base font-medium']">
-          <HomeIcon class="ml-2 -mr-1 h-5 w-5 text-violet-200 hover:text-violet-100" aria-hidden="true"/>
-            Inicio
-        </DisclosureButton>
         <DisclosureButton
-          class="inline-flex w-full justify-center rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+          class="inline-flex w-full rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
         >
-          Options
           <HomeIcon
-            class="ml-2 -mr-1 h-5 w-5 text-violet-200 hover:text-violet-100"
+            class="mr-2 h-5 w-5 text-white"
             aria-hidden="true"
           />
+          Inicio
         </DisclosureButton>
       </div>
     </DisclosurePanel>
