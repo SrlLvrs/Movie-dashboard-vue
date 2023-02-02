@@ -16,6 +16,7 @@ const destacadas = [
 </script>
 
 <template>
+  <!-- Revisar el carrusel de flowbite vue, para ver si se pueden poner los botones encima y para ver si se pueden poner 2 columnas grid, con foto -->
   <h1 class="m-5 text-xl font-semibold">Películas populares</h1>
   <div id="controls-carousel" class="relative" data-carousel="static">
     <!-- Carousel wrapper -->
