@@ -1,9 +1,16 @@
 <script setup>
 const destacadas = [
   {
-    name: 'Enola Holmes 2 en v-for',
-    poster: '../assets/enola.jpg',
+    name: 'Enola Holmes 2',
+    year: '2022',
+    fanart: '/enola.jpg',
     rate: '7.5',
+  },
+  {
+    name: 'Black Panther 2:',
+    year: '2022',
+    fanart: '/wakanda.jpg',
+    rate: '7.3',
   },
 ];
 </script>
@@ -13,27 +20,35 @@ const destacadas = [
   <div id="controls-carousel" class="relative" data-carousel="static">
     <!-- Carousel wrapper -->
     <div class="relative h-64 overflow-hidden">
-      <!-- Item 1 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+      <!-- Item v-for -->
+      <div
+        v-for="item in destacadas"
+        :key="item.index"
+        class="hidden duration-700 ease-in-out"
+        data-carousel-item
+      >
+        <!-- Fanart de fondo -->
         <img
-          src="../assets/enola.jpg"
-          class="absolute top-1/2 left-1/2 block w-auto -translate-x-1/2 -translate-y-1/2"
-          alt="..."
+          :src='item.fanart'
+          class="absolute top-1/2 left-1/2 block w-full -translate-x-1/2 -translate-y-1/2"
         />
+        <!-- Título y botones -->
         <div class="grid grid-cols-2 gap-4 text-slate-50">
+          <!-- Columna izquierda: Título -->
           <div class="z-[25] grid h-64 content-end p-3">
             <p>
-              <span class="font-semibold">Enola Holmes 2</span><br />
-              2022<br />
+              <span class="font-semibold">{{ item.name }}</span><br />
+              {{ item.year }}<br />
               <!-- IMDB LOGO -->
               <img
                 class="relative bottom-0.5 mr-2 inline-block h-6 w-11"
-                src="../assets/imdb.svg"
+                src="/imdb.svg"
                 alt="imdb logo"
               />
-              7.5
+              {{ item.rate }}
             </p>
           </div>
+          <!-- Columna derecha: Botones -->
           <div class="z-[25] grid grid-cols-2 content-end gap-1 p-3">
             <button
               type="button"
@@ -49,28 +64,6 @@ const destacadas = [
             </button>
           </div>
         </div>
-      </div>
-      <!-- Item 2 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-        <img
-          src="../assets/foto-2.jpg"
-          class="absolute top-1/2 left-1/2 block w-full -translate-x-1/2 -translate-y-1/2"
-          alt="..."
-        />
-      </div>
-      <!-- Item v-for -->
-      <div
-        v-for="item in destacadas"
-        :key="item.index"
-        class="hidden duration-700 ease-in-out"
-        data-carousel-item
-      >
-        {{ item.name }}
-        <img
-          :src="item.poster"
-          alt=""
-          class="absolute top-1/2 left-1/2 block w-full -translate-x-1/2 -translate-y-1/2"
-        />
       </div>
     </div>
     <!-- Slider controls -->
