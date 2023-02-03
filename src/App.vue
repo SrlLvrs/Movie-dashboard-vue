@@ -1,11 +1,11 @@
 <script setup>
  import NavBar from './components/NavBar.vue'
- import Header from './components/Header.vue';
+ import Destacadas from './components/Destacadas.vue'
 </script>
 
 <template>
   <NavBar></NavBar>
-  <Header></Header>
+  <Destacadas></Destacadas>
 </template>
 
 <style scoped>
