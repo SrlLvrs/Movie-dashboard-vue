@@ -7,18 +7,29 @@ onMounted(() => {
   initCarousels();
 });
 
-const continuar = [
+/* Para generar ambas columnas en el slide
+el array está configurado por pares de películas. */
+const dobles = [
   {
-    name: "Enola Holmes 2",
-    year: "2022",
-    fanart: "/enola.jpg",
-    rate: "7.5",
+    peli1: {
+      name: "Emily the Criminal",
+      year: "2022",
+      image: "/emily.jpg",
+    },
+    peli2: {
+      name: "Falling for Christmas",
+      year: "2022",
+      image: "/falling.jpg",
+    },
   },
   {
-    name: "Black Panther 2: Wakanda Forever",
-    year: "2022",
-    fanart: "/wakanda.jpg",
-    rate: "7.3",
+    peli1: {
+      name: "Watcher",
+      year: "2022",
+      image: "/watcher.jpg",
+    },
+    /* Podría existir un número impar de películas, pero de todas formas debe existir el siguiente objeto vacío */
+    peli2: {},
   },
 ];
 </script>
@@ -27,21 +38,51 @@ const continuar = [
   <h2 class="m-5 text-lg font-semibold">Continuar Viendo</h2>
   <div class="relative" data-carousel="static">
     <!-- Carousel wrapper -->
-    <div class="relative h-64 overflow-hidden">
+    <div class="relative h-52 overflow-hidden">
       <!-- Item v-for -->
       <div
-        v-for="item in continuar"
+        v-for="item in dobles"
         :key="item.index"
         class="hidden duration-700 ease-in-out"
         data-carousel-item
       >
         <!-- Título y botones -->
-        <div class="border-2 border-blue-600 grid grid-cols-2 gap-4">
-          <!-- Columna izquierda: Título -->
-          <div class="z-[25] grid grid-cols-2 gap-4 h-64 content-end border-2 border-red-600 p-3 bg-slate-200">
-            <p class="border-2 border-green-600 grid grid-cols-2 gap-4">
-              <span class="font-semibold">{{ item.name }}</span>
+        <div class="grid grid-cols-2 gap-4">
+          <!-- Columna izquierda -->
+          <div
+            class="rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800"
+          >
+            <a href="#">
+              <img
+                class="rounded-t-lg"
+                :src="item.peli1.image"
+              />
+            </a>
+            <div class="px-3 pb-3">
+              <p>
+              <span class="font-semibold"> {{ item.peli1.name }}</span>
+              <br>
+              {{ item.peli1.year }}
             </p>
+            </div>
+          </div>
+          <!-- Columna derecha -->
+          <div
+            class="rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800"
+          >
+            <a href="#">
+              <img
+                class="rounded-t-lg"
+                :src="item.peli2.image"
+              />
+            </a>
+            <div class="px-3 pb-3">
+              <p>
+              <span class="font-semibold"> {{ item.peli2.name }}</span>
+              <br>
+              {{ item.peli2.year }}
+            </p>
+            </div>
           </div>
         </div>
       </div>

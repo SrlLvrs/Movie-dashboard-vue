@@ -3,6 +3,10 @@
 Creado con Vue.js 3, Tailwind CSS y Flowbite
 
 
+# Versión en vivo en:
+https://movie-dashboard-vue.netlify.app/
+
+
 ***Importante*** 
 
 
