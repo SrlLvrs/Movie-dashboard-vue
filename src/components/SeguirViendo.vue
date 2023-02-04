@@ -28,8 +28,7 @@ const dobles = [
       year: "2022",
       image: "/watcher.jpg",
     },
-    /* Podría existir un número impar de películas, pero de todas formas debe existir el siguiente objeto vacío */
-    peli2: {},
+    /* Podría existir un número impar de películas, pues la 2da película se evalúa con v-if*/
   },
 ];
 </script>
@@ -53,35 +52,30 @@ const dobles = [
             class="rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800"
           >
             <a href="#">
-              <img
-                class="rounded-t-lg"
-                :src="item.peli1.image"
-              />
+              <img class="rounded-t-lg" :src="item.peli1.image" />
             </a>
             <div class="px-3 pb-3">
               <p>
-              <span class="font-semibold"> {{ item.peli1.name }}</span>
-              <br>
-              {{ item.peli1.year }}
-            </p>
+                <span class="font-semibold"> {{ item.peli1.name }}</span>
+                <br />
+                {{ item.peli1.year }}
+              </p>
             </div>
           </div>
           <!-- Columna derecha -->
           <div
+            v-if="item.peli2"
             class="rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800"
           >
             <a href="#">
-              <img
-                class="rounded-t-lg"
-                :src="item.peli2.image"
-              />
+              <img class="rounded-t-lg" :src="item.peli2.image" />
             </a>
             <div class="px-3 pb-3">
               <p>
-              <span class="font-semibold"> {{ item.peli2.name }}</span>
-              <br>
-              {{ item.peli2.year }}
-            </p>
+                <span class="font-semibold"> {{ item.peli2.name }}</span>
+                <br />
+                {{ item.peli2.year }}
+              </p>
             </div>
           </div>
         </div>
