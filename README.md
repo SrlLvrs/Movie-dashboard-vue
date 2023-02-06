@@ -1,6 +1,6 @@
 # Movie Dashboard + Vue 3
 
-Creado con Vue.js 3, Tailwind CSS y Flowbite
+Creado con Vue.js 3, Tailwind CSS y daisyUI
 
 
 # Versión en vivo en:
