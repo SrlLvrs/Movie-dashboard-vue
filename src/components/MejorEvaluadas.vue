@@ -1,37 +1,65 @@
 <script setup>
-const continuar = [
+const mejores = [
   {
-    name: "Emily the Criminal",
+    name: "Black Adam",
     year: "2022",
-    image: "/emily.jpg",
+    rate: "7.9",
+    href: '#',
+    image: "/black-adam.jpg",
   },
   {
-    name: "Falling for Christmas",
+    name: "Fall",
     year: "2022",
-    image: "/falling.jpg",
+    rate: "7.6",
+    href: '#',
+    image: "/fall.jpg",
   },
   {
-    name: "Watcher",
+    name: "Lost Bullet 2",
     year: "2022",
-    image: "/watcher.jpg",
+    rate: "7.2",
+    href: '#',
+    image: "/lost-bullet-2.jpg",
+  },
+  {
+    name: "Minions: The Rise of Gru",
+    year: "2022",
+    rate: "7.7",
+    href: '#',
+    image: "/minions-2.jpg",
+  },
+  {
+    name: "Smile",
+    year: "2022",
+    rate: "7.3",
+    href: '#',
+    image: "/smile.jpg",
   },
 ];
 </script>
 
 <template>
-  <h2 class="m-5 text-lg font-semibold">Continuar Viendo</h2>
+  <h2 class="m-5 text-lg font-semibold">Mejor Evaluadas</h2>
   <div class="carousel rounded-box">
-    <div class="carousel-item" v-for="item in continuar" :key="item.index">
-      <div class="card card-compact w-72 bg-base-100 shadow-xl mr-3">
-        <figure><img :src="item.image" alt="poster" /></figure>
-        <div class="card-body">
-          <h2 class="card-title">{{ item.name }}</h2>
-          <p>{{ item.year }}</p>
-          <div class="card-actions justify-end">
-            <button class="btn btn-primary">Seguir viendo</button>
+    <div class="carousel-item pb-4 mr-3" v-for="item in mejores" :key="item.index">
+      <a :href="item.href">
+        <div class="card card-compact w-40 bg-base-100 shadow-lg">
+          <figure><img :src="item.image" alt="poster" /></figure>
+          <div class="card-body">
+            <h2 class="card-title truncate">{{ item.name }}</h2>
+            <p>{{ item.year }}</p>
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                class="w-6 h-6 inline-block relative bottom-0.5 fill-amber-400 mr-1">
+                <path fill-rule="evenodd"
+                  d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              {{ item.rate }}
+            </p>
           </div>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </template>
