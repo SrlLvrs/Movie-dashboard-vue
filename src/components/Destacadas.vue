@@ -18,7 +18,7 @@ const destacadas = [
 <template>
   <h1 class="m-5 text-xl font-semibold">Películas populares</h1>
   <div class="carousel rounded-box">
-    <div class="carousel-item h-72 md:h-96 w-full bg-cover bg-center" v-for="item in destacadas" :key="item.index"
+    <div class="carousel-item h-72 md:h-96 lg:h-[32rem] w-full bg-cover bg-center" v-for="item in destacadas" :key="item.index"
       :style="{ backgroundImage: `url(${item.fanart})` }">
       <!-- Título y botones -->
       <div class="grid grid-cols-2 gap-1 w-full text-slate-50">
