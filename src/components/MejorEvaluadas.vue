@@ -43,7 +43,7 @@ const mejores = [
   <div class="carousel rounded-box">
     <div class="carousel-item pb-4 mr-3" v-for="item in mejores" :key="item.index">
       <a :href="item.href">
-        <div class="card card-compact w-40 bg-base-100 shadow-lg">
+        <div class="card card-compact w-40 md:w-48 bg-base-100 shadow-lg">
           <figure><img :src="item.image" alt="poster" /></figure>
           <div class="card-body">
             <h2 class="card-title truncate">{{ item.name }}</h2>

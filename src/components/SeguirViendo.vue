@@ -22,7 +22,7 @@ const continuar = [
   <h2 class="m-5 text-lg font-semibold">Continuar Viendo</h2>
   <div class="carousel rounded-box">
     <div class="carousel-item pb-4 mr-3" v-for="item in continuar" :key="item.index">
-      <div class="card card-compact w-72 bg-base-100 shadow-lg">
+      <div class="card card-compact w-72 md:w-80 bg-base-100 shadow-lg">
         <figure><img :src="item.image" alt="poster" /></figure>
         <div class="card-body">
           <h2 class="card-title">{{ item.name }}</h2>
