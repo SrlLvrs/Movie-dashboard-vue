@@ -39,16 +39,16 @@ const mejores = [
 </script>
 
 <template>
-  <h2 class="m-5 text-lg font-semibold">Mejor Evaluadas</h2>
+  <h2 class="m-5 text-xl md:text-2xl font-semibold">Mejor Evaluadas</h2>
   <div class="carousel rounded-box">
     <div class="carousel-item pb-4 mr-3" v-for="item in mejores" :key="item.index">
       <a :href="item.href">
-        <div class="card card-compact w-40 md:w-48 bg-base-100 shadow-lg">
+        <div class="card card-compact w-40 md:w-48 lg:w-72 bg-base-100 shadow-lg">
           <figure><img :src="item.image" alt="poster" /></figure>
           <div class="card-body">
             <h2 class="card-title truncate">{{ item.name }}</h2>
-            <p>{{ item.year }}</p>
-            <p>
+            <p class="lg:text-lg">{{ item.year }}</p>
+            <p class="lg:text-lg">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                 class="w-6 h-6 inline-block relative bottom-0.5 fill-amber-400 mr-1">
                 <path fill-rule="evenodd"

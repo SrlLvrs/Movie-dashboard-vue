@@ -61,7 +61,7 @@ const items = [
     <div class="navbar-center">
       <!-- Lado central del navbar, vacío -->
     </div>
-    <div class="navbar-end hidden lg:flex lg:w-3/4">
+    <div class="navbar-end hidden lg:flex lg:w-3/4 lg:text-lg">
       <ul class="menu menu-horizontal px-1">
         <li v-for="item in items" :key="item.name" :href="item.href">
           <a :href="item.href">

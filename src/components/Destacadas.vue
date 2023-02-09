@@ -16,14 +16,14 @@ const destacadas = [
 </script>
 
 <template>
-  <h1 class="m-5 text-xl font-semibold">Películas populares</h1>
+  <h1 class="m-5 md:text-2xl text-xl font-semibold">Películas populares</h1>
   <div class="carousel rounded-box">
-    <div class="carousel-item h-72 md:h-96 lg:h-[32rem] w-full bg-cover bg-center" v-for="item in destacadas" :key="item.index"
-      :style="{ backgroundImage: `url(${item.fanart})` }">
+    <div class="md:text-xl lg:text-2xl carousel-item h-72 md:h-96 lg:h-[32rem] w-full bg-cover bg-center" v-for="item in destacadas"
+      :key="item.index" :style="{ backgroundImage: `url(${item.fanart})` }">
       <!-- Título y botones -->
       <div class="grid grid-cols-2 gap-1 w-full text-slate-50">
         <!-- Columna izquierda: Título -->
-        <div class="grid content-end p-3">
+        <div class="grid content-end p-3 lg:p-5">
           <p>
             <span class="font-semibold">{{ item.name }}</span><br />
             {{ item.year }}<br />
@@ -33,9 +33,9 @@ const destacadas = [
           </p>
         </div>
         <!-- Columna derecha: Botones -->
-        <div class="grid grid-cols-2 content-end gap-2 p-3">
-          <button class="btn btn-primary">Ver ahora</button>
-          <button class="btn btn-secondary">Descargar</button>
+        <div class="grid grid-cols-2 content-end gap-2 p-3 lg:p-5">
+          <button class="btn btn-primary text-xs md:text-base lg:text-lg">Ver ahora</button>
+          <button class="btn btn-secondary text-xs md:text-base lg:text-lg">Descargar</button>
         </div>
       </div>
     </div>
