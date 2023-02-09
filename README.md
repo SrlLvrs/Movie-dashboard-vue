@@ -1,7 +1,7 @@
 # Movie Dashboard + Vue 3
 
 Creado con Vue.js 3, Tailwind CSS y daisyUI.
-**disponible sólo en vista sm y md**
+**disponible en vistas desde SM hasta LG**
 
 
 # Versión en vivo en:

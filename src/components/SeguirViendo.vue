@@ -1,6 +1,11 @@
 <script setup>
 const continuar = [
   {
+    name: "Glass Onion",
+    year: "2022",
+    image: "/glass-onion.jpg",
+  },
+  {
     name: "Emily the Criminal",
     year: "2022",
     image: "/emily.jpg",

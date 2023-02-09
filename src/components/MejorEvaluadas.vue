@@ -1,6 +1,27 @@
 <script setup>
 const mejores = [
   {
+    name: "The Offering",
+    year: "2023",
+    rate: "5.8",
+    href: '#',
+    image: "/offering.jpg",
+  },
+  {
+    name: "Pinocchio",
+    year: "2022",
+    rate: "8.3",
+    href: '#',
+    image: "/pinocchio.jpg",
+  },
+  {
+    name: "Avatar 2",
+    year: "2022",
+    rate: "7.7",
+    href: '#',
+    image: "/avatar-2.jpg",
+  },
+  {
     name: "Black Adam",
     year: "2022",
     rate: "7.9",
@@ -22,7 +43,7 @@ const mejores = [
     image: "/lost-bullet-2.jpg",
   },
   {
-    name: "Minions: The Rise of Gru",
+    name: "Minions 2",
     year: "2022",
     rate: "7.7",
     href: '#',
@@ -43,7 +64,7 @@ const mejores = [
   <div class="carousel rounded-box">
     <div class="carousel-item pb-4 mr-3" v-for="item in mejores" :key="item.index">
       <a :href="item.href">
-        <div class="card card-compact w-40 md:w-48 lg:w-72 bg-base-100 shadow-lg">
+        <div class="card card-compact w-40 md:w-48 bg-base-100 shadow-lg">
           <figure><img :src="item.image" alt="poster" /></figure>
           <div class="card-body">
             <h2 class="card-title truncate">{{ item.name }}</h2>
