@@ -4,7 +4,8 @@ import {
   MagnifyingGlassIcon,
   HeartIcon,
   ArrowDownTrayIcon,
-  Cog8ToothIcon
+  Cog8ToothIcon,
+  VideoCameraIcon
 } from "@heroicons/vue/24/outline";
 
 const items = [
@@ -51,17 +52,25 @@ const items = [
           <li v-for="item in items" :key="item.name" :href="item.href">
             <a :href="item.href">
               <component :is="item.icon" class="h-6 w-6 flex-shrink-0" aria-hidden="true" />
-              {{ item.name }}
+              <span class="md:text-lg">
+                {{ item.name }}
+              </span>
             </a>
           </li>
         </ul>
       </div>
-      <a class="btn btn-ghost normal-case text-xl">logo</a>
+      <a class="btn btn-ghost normal-case text-xl">
+        <span class="mr-2">
+          Movie Dashboard
+        </span>
+        <VideoCameraIcon class="h-8 w-8 relative top-px" />
+      </a>
     </div>
     <div class="navbar-center">
       <!-- Lado central del navbar, vacío -->
     </div>
-    <div class="navbar-end hidden lg:flex lg:w-3/4 lg:text-lg">
+    <div class="navbar-end hidden lg:flex lg:w-3/4">
+      <!-- Lado derecho del navbar -->
       <ul class="menu menu-horizontal px-1">
         <li v-for="item in items" :key="item.name" :href="item.href">
           <a :href="item.href">

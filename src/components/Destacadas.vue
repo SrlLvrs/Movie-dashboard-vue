@@ -33,7 +33,7 @@ const destacadas = [
           </p>
         </div>
         <!-- Columna derecha: Botones -->
-        <div class="flex justify-end mt-auto gap-2 p-3 lg:p-5 border-2 border-red-500">
+        <div class="flex justify-end mt-auto gap-2 p-3 lg:p-5">
           <button class="btn btn-primary text-xs md:text-base lg:text-lg">Ver ahora</button>
           <button class="btn btn-secondary text-xs md:text-base lg:text-lg">Descargar</button>
         </div>
